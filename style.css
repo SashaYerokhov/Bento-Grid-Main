@@ -1,0 +1,396 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+:root {
+    --purple-100: hsl(254, 88%, 90%);
+    --purple-500: hsl(256, 67%, 59%);
+    --yellow-100: hsl(31, 66%, 93%);
+    --yellow-500: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+}
+
+@font-face {
+    font-family: "DM Sans", sans-serif;
+    src: url(./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+.dm-sans-regular {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-sans-medium {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dm-sans-italic {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+body {
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 64.3125rem;
+    background: var(--yellow-100);
+    font-size: 1.125rem;
+}
+
+.cards {
+    /* border: 2px solid rebeccapurple; */
+    max-width: 71.25rem;
+    margin: 83px auto;
+    padding: 0 10px;
+    min-height: 55.3125rem;
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: [row-start1] 325px [row-end] 245px 245px;
+    /* grid-template-rows: repeat(3, 245px); */
+    grid-auto-flow: dense;
+    gap: 35px;
+}
+
+.card {
+    border-radius: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card__stars {
+    background: var(--purple-500);
+    color: var(--white);
+    grid-column: 2 / 4;
+    padding-top: 65px;
+    text-align: center;
+}
+
+.card__stars-title {
+    width: 30.625rem;
+    font-size: 3.125rem;
+    line-height: .9;
+    margin-bottom: 30px;
+}
+
+.card__stars-title .color {
+    color: var(--yellow-500);
+}
+
+.card__stars img {
+    width: 11.875rem;
+}
+
+.card__manager {
+    background: var(--white);
+    color: var(--black);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.card__manager img {
+    height: 4.25rem;
+    margin-bottom: 20px;
+}
+
+.card__manager-title {
+    width: 11.5625rem;
+    color: var(--black);
+    font-size: 1.75rem;
+    line-height: .9;
+}
+
+.card__maintain {
+    background: var(--yellow-500);
+    color: var(--black);
+    grid-column: 3 / 4;
+    padding: 22px 0 0 15px;
+    overflow: hidden;
+}
+
+.card__maintain-title {
+    width: 9.0625rem;
+    color: var(--black);
+    font-size: 1.75rem;
+    line-height: .9;
+    margin-bottom: 20px;
+}
+
+.card__maintain img {
+    display: block;
+    width: 13.125rem;
+}
+
+.card__social {
+    background: var(--purple-100);
+    color: var(--black);
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    padding: 50px 0 0 30px;
+    overflow: hidden;
+}
+
+.card__social-title {
+    color: var(--black);
+    font-size: 2rem;
+    line-height: .9;
+    margin-bottom: 30px;
+}
+
+.card__social img {
+    height: 20rem;
+    margin-bottom: 20px;
+}
+
+.card__follower {
+    background: var(--purple-500);
+    color: var(--white);
+    grid-column: 3 / 5;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card__follower img {
+    display: block;
+    width: 14.375rem;
+}
+
+.card__follower-title {
+    width: 15.625rem;
+    font-size: 2.25rem;
+    line-height: .9
+}
+
+.card__percent {
+    background: var(--white);
+    color: var(--black);
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding: 30px 0 0 13px;
+}
+
+.card__percent-title {
+    font-size: 3.625rem;
+    margin-bottom: 20px;
+}
+
+.card__percent-text {
+    margin-bottom: 35px;
+}
+
+.card__percent img {
+    width: 11.25rem;
+}
+
+.card__quicker {
+    /* 255x418*/
+    background: var(--white);
+    color: var(--black);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-bottom: -90px;
+    padding: 80px 0 0 30px;
+}
+
+.card__quicker-title {
+    color: var(--black);
+    width: 10.9375rem;
+    font-size: 2rem;
+    line-height: .9;
+    margin-bottom: 20px;
+}
+
+.card__quicker-title span {
+    color: var(--purple-500);
+}
+
+.card__quicker img {
+    width: 12.1875rem;
+}
+
+.card__write {
+    /* 255x435 */
+    margin-top: 90px;
+    background: var(--yellow-500);
+    color: var(--black);
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    padding: 25px 0 0 23px;
+}
+
+.card__write-title {
+    width: 10.1875rem;
+    color: var(--black);
+    font-size: 2rem;
+    line-height: .9;
+    margin-bottom: 50px;
+}
+
+.card__write img {
+    width: 12.8125rem;
+}
+
+@media(max-width: 1120px) {
+    body {
+        min-height: 162.9375rem;
+    }
+
+    .cards {
+        width: 21.5625rem;
+        margin: 32px auto;
+        grid-template-columns: 21.5625rem;
+        grid-template-rows: 1fr;
+        gap: 35px;
+    }
+
+    .cards>* {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .card__stars {
+        padding: 40px 0 0 45px;
+    }
+
+    .card__stars-title {
+        width: 15.9375rem;
+        font-size: 2.875rem;
+        margin: 0 0 25px 0;
+    }
+
+    .card__manager {
+        padding: 40px 0 20px 13px;
+        overflow: visible;
+    }
+
+    .card__manager img {
+        margin-bottom: 15px;
+    }
+
+    .card__manager-title {
+        font-size: 1.375rem;
+        width: 18.125rem;
+    }
+
+    .card__maintain {
+        height: 13.4375rem;
+        padding-top: 15px;
+    }
+
+    .card__maintain-title {
+        width: 14.375rem;
+        font-size: 1.375rem;
+        margin-bottom: 15px;
+    }
+
+    card__maintain img {
+        display: block;
+    }
+
+    .card__social {
+        height: 29.375rem;
+        text-align: center;
+        padding: 30px 0 0 15px;
+        overflow: visible;
+    }
+
+    .card__social-title {
+        font-size: 1.625rem;
+        margin-bottom: 15px;
+    }
+
+    .card__social img {
+        height: 275px;
+        margin-bottom: 20px;
+    }
+
+    .card__follower {
+        flex-direction: column;
+        gap: 35px;
+        padding: 20px 0;
+    }
+
+    .card__follower-title {
+        text-align: center;
+        font-size: 1.875rem;
+    }
+
+    .card__percent {
+        padding-bottom: 20px;
+    }
+
+    .card__percent-title {
+        font-size: 3.125rem;
+    }
+
+    .card__percent-text {
+        margin-bottom: 20px;
+    }
+
+    .card__quicker {
+        padding: 30px 0 30px 13px;
+    }
+
+    .card__quicker-title {
+        width: 17.5rem;
+        font-size: 1.75rem;
+    }
+
+    .card__write {
+        padding: 20px 0 0 13px;
+    }
+
+    .card__write-title {
+        width: 15.9375rem;
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    font-style: italic;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
